@@ -32,8 +32,8 @@ public:
 	virtual void pad00(void) = 0;
 	virtual void pad01(void) const = 0;
 	virtual void SetPosition(Vector const&) = 0;
-	virtual Vector GetEyePosition(void) const = 0;
-	virtual Vector GetViewVector(void) const = 0;
+	virtual const Vector & GetEyePosition(void) const = 0;
+	virtual const Vector & GetViewVector(void) const = 0;
 	virtual void AimHeadTowards(Vector const&, IBody::LookAtPriorityType, float, void*, char const*, bool, float) = 0;
 	virtual void AimHeadTowards(CBaseEntity *, IBody::LookAtPriorityType, float, void*, char const*, bool, float) = 0;
 	virtual bool IsHeadAimingOnTarget(void) const = 0;

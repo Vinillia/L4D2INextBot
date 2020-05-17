@@ -35,7 +35,7 @@ public:
 		return reinterpret_cast<Fn>(this->original_vft[function_index]);
 	}
 
-	bool HookFunction(void* new_function, const std::size_t function_index)
+	inline bool HookFunction(void* new_function, const std::size_t function_index)
 	{
 		if (function_index > this->total_functions)
 			return false;

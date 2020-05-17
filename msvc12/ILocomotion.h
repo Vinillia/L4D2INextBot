@@ -32,9 +32,9 @@ public:
 	virtual float GetSpeedLimit(void) const = 0;
 	virtual bool IsOnGround(void) const = 0;
 	virtual CBaseEntity* GetGround(void) const = 0;
-	virtual Vector& GetGroundNormal(void) const = 0;
+	virtual const Vector & GetGroundNormal(void) const = 0;
 	virtual float GetGroundSpeed(void) const = 0;
-	virtual Vector& GetGroundMotionVector(void) const = 0;
+	virtual const Vector & GetGroundMotionVector(void) const = 0;
 	virtual void ClimbLadder(void const*, void const*) = 0;
 	virtual void DescendLadder(void const*, void const*) = 0;
 	virtual bool IsUsingLadder(void) const = 0;
@@ -43,7 +43,7 @@ public:
 	virtual void FaceTowards(Vector const&) = 0;
 	virtual void SetDesiredLean(Vector const&) = 0;
 	virtual const Vector GetDesiredLean(void) const = 0;
-	virtual Vector GetFeet(void) const = 0;
+	virtual const Vector & GetFeet(void) const = 0;
 	virtual float GetStepHeight(void) const = 0;
 	virtual float GetMaxJumpHeight(void) const = 0;
 	virtual float GetDeathDropHeight(void) const = 0;
@@ -62,7 +62,7 @@ public:
 	virtual float GetStuckDuration(void) const = 0;
 	virtual void ClearStuckStatus(char const*) = 0;
 	virtual bool IsAttemptingToMove(void) const = 0;
-	virtual Vector GetLastApproachPosition(void) const = 0;
+	virtual const Vector & GetLastApproachPosition(void) const = 0;
 	virtual void AdjustPosture(Vector const&) = 0;
 
 private:

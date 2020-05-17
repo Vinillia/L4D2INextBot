@@ -15,7 +15,7 @@ public:
 	virtual void* GetIntentionInterface(void) const = 0;
 	virtual IVision* GetVisionInterface(void) const = 0;
 	virtual bool SetPosition(Vector const&) = 0;
-	virtual Vector GetPosition(void) const = 0;
+	virtual const Vector &GetPosition(void) const = 0;
 	virtual bool IsEnemy(CBaseEntity const*) const = 0;
 	virtual bool IsFriend(CBaseEntity const*) const = 0;
 	virtual bool IsSelf(CBaseEntity const*) const = 0;
@@ -45,7 +45,7 @@ public:
 	virtual void IsDebugFilterMatch(char const*) const = 0;
 	virtual void DisplayDebugText(char const*) const = 0;
 
-private:
+public:
 	friend class INextBotComponent;
 	void RegisterComponent(INextBotComponent *comp) {};		// components call this to register themselves with the bot that contains them
 	INextBotComponent *m_componentList;						// the first component

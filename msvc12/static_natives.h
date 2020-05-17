@@ -35,7 +35,7 @@ cell_t SetPosition(IPluginContext *pContext, const cell_t *params)
 	pContext->LocalToPhysAddr(params[2], &addr);
 	Vector source(sp_ctof(addr[0]), sp_ctof(addr[1]), sp_ctof(addr[2]));
 
-	return bot->SetPosition(source);;
+	return bot->SetPosition(source);
 }
 
 cell_t GetPosition(IPluginContext *pContext, const cell_t *params)
